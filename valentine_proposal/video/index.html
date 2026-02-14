@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Love Story</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
+</head>
+
+<body>
+    <!-- Background music -->
+    <audio id="bgMusic" loop>
+        <source src=".\static\audio.mpeg" type="audio/mpeg">
+    </audio>
+
+    <!-- Animated hearts background -->
+    <div class="hearts-background"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Our Love Story</h1>
+            <p class="hero-subtitle">A journey of hearts intertwined</p>
+            <button class="cta-button hero-btn" onclick="scrollToSection('timeline')">✨ Begin Our Story ✨</button>
+        </div>
+        <div class="hero-hearts">
+            <div class="heart heart-1">❤️</div>
+            <div class="heart heart-2">🤍</div>
+            <div class="heart heart-3">❤️</div>
+        </div>
+    </section>
+
+    <!-- Love Story Timeline -->
+    <section id="timeline" class="timeline">
+        <div class="timeline-container">
+            <h2 class="section-title">Our Timeline</h2>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">
+                    <div class="marker-circle">✨</div>
+                </div>
+                <div class="timeline-content">
+                    <h3>We Met</h3>
+                    <p>The moment our eyes met, I knew my life was about to change forever.</p>
+                    <img src=".\static\pic3.jpeg" alt="We met" class="timeline-img">
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">
+                    <div class="marker-circle">💕</div>
+                </div>
+                <div class="timeline-content">
+                    <h3>First Love</h3>
+                    <p>You became my favorite person. Every moment with you feels like home.</p>
+                    <img src=".\static\pic1.jpeg" alt="First love" class="timeline-img">
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">
+                    <div class="marker-circle">🌹</div>
+                </div>
+                <div class="timeline-content">
+                    <h3>Growing Together</h3>
+                    <p>Through every season, you've been my constant companion and my greatest blessing.</p>
+                    <img src=".\static\pic2.jpeg" alt="Growing together" class="timeline-img">
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">
+                    <div class="marker-circle">💎</div>
+                </div>
+                <div class="timeline-content">
+                    <h3>Forever Starts Now</h3>
+                    <p>I want to spend the rest of my life making you as happy as you make me.</p>
+                    <img src=".\static\pic4.jpeg" alt="Forever" class="timeline-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Gallery -->
+    <section id="gallery" class="gallery">
+        <h2 class="section-title">Our Moments</h2>
+        <div class="gallery-carousel">
+            <div class="carousel-container">
+                <img src=".\static\pic5.jpeg" alt="Memory 1" class="carousel-image active">
+                <img src=".\static\pic6.jpeg" alt="Memory 2" class="carousel-image">
+                <img src=".\static\pic7.jpeg" alt="Memory 3" class="carousel-image">
+                <img src=".\static\pic8.jpeg" alt="Memory 4" class="carousel-image">
+                <img src=".\static\pic9.jpeg" alt="Memory 5" class="carousel-image">
+            </div>
+            <button class="carousel-btn prev" onclick="prevImage()">❮</button>
+            <button class="carousel-btn next" onclick="nextImage()">❯</button>
+            <div class="carousel-dots">
+                <span class="dot active" onclick="currentImage(0)"></span>
+                <span class="dot" onclick="currentImage(1)"></span>
+                <span class="dot" onclick="currentImage(2)"></span>
+                <span class="dot" onclick="currentImage(3)"></span>
+                <span class="dot" onclick="currentImage(4)"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Love Messages -->
+    <section id="messages" class="messages">
+        <h2 class="section-title">Why I Love You</h2>
+        <div class="messages-grid">
+            <div class="message-card">
+                <div class="message-icon">💫</div>
+                <p>Your smile makes all my troubles disappear</p>
+            </div>
+            <div class="message-card">
+                <div class="message-icon">🌟</div>
+                <p>You inspire me to be the best version of myself</p>
+            </div>
+            <div class="message-card">
+                <div class="message-icon">🎀</div>
+                <p>Being with you feels like coming home</p>
+            </div>
+            <div class="message-card">
+                <div class="message-icon">✨</div>
+                <p>You are my greatest adventure and my safest place</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Messages Section with Envelope Cards -->
+    <section id="special-messages" class="special-messages">
+        <h2 class="section-title">Special Messages</h2>
+        <div class="envelope-container">
+            <button class="envelope-card" data-title="You Matter 💖" data-image=".\static\pic10.jpeg"
+                data-text="You matter to me in ways words cannot fully explain. Your existence makes my world warmer, calmer, and better. If you ever forget your worth, come back to this and remember: you matter deeply.">
+                <div class="mini-envelope">
+                    <div class="mini-flap"></div>
+                    <div class="mini-body"></div>
+                    <div class="pop-letter"></div>
+                </div>
+                <span>For Your Heart 💖</span>
+            </button>
+
+            <button class="envelope-card" data-title="My Safe Place ✨" data-image=".\static\pic11.jpeg"
+                data-text="After every mood, every fight, every silence, every misunderstanding, it is still you I choose. Still you I want. Still you I care for. No matter what changes, my heart keeps coming back to you.">
+                <div class="mini-envelope">
+                    <div class="mini-flap"></div>
+                    <div class="mini-body"></div>
+                    <div class="pop-letter"></div>
+                </div>
+                <span>My Safe Place ✨</span>
+            </button>
+
+            <button class="envelope-card" data-title="You are mine ❤️" data-image=".\static\pic14.jpeg"
+                data-text="You are important to me in ways I cannot explain. Your smile, your voice, your presence, everything about you matters. Please never doubt your value, because to me, you are priceless.">
+                <div class="mini-envelope">
+                    <div class="mini-flap"></div>
+                    <div class="mini-body"></div>
+                    <div class="pop-letter"></div>
+                </div>
+                <span>A Little Reminder ❤️</span>
+            </button>
+
+            <button class="envelope-card" data-title="For our smile 💌" data-image=".\static\pic12.jpeg"
+                data-text="I do not want arguments to create distance between us. I want love, peace, and you always. I do not want to lose you.">
+                <div class="mini-envelope">
+                    <div class="mini-flap"></div>
+                    <div class="mini-body"></div>
+                    <div class="pop-letter"></div>
+                </div>
+                <span>To The One I Love 💛💌</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Message Panel for showing envelope content -->
+    <section class="message-panel" aria-live="polite">
+        <div class="message-envelope">
+            <div class="message-card-body">
+                <div class="message-image">
+                    <img src="" alt="Romantic moment" />
+                </div>
+                <div class="message-content">
+                    <h2></h2>
+                    <p></p>
+                    <button class="love-btn" type="button">Be mine forever❓💝</button>
+                </div>
+            </div>
+            <button class="back-btn" type="button">Back</button>
+        </div>
+    </section>
+
+    <!-- Proposal Section -->
+    <section id="proposal" class="proposal">
+        <div class="proposal-container">
+            <div class="proposal-image">
+                <img src=".\static\pic13.jpeg" alt="We together" class="couple-image">
+                <div class="floating-hearts">
+                    <span class="float-heart">❤️</span>
+                    <span class="float-heart">❤️</span>
+                    <span class="float-heart">❤️</span>
+                </div>
+            </div>
+            <div class="proposal-content">
+                <h2>Will You Say Yes?</h2>
+                <p>I promise to love you, support you, and cherish every moment we share together. I can't wait to build
+                    our forever with you.</p>
+                <div class="proposal-buttons">
+                    <button class="btn-yes" onclick="celebrateYes()">💕 YES! 💕</button>
+                    <button class="btn-no" onclick="moveButton()">Maybe Later</button>
+                </div>
+            </div>
+        </div>
+        <div class="confetti-container"></div>
+    </section>
+
+    <!-- Success Screen - Final Celebration -->
+    <section class="final-screen" aria-live="polite">
+        <div class="final-content">
+            <div class="heart-animation-container">
+                <div class="animated-heart">❤️</div>
+                <div class="heart-particles"></div>
+            </div>
+            <img src=".\static\pic6.jpeg" alt="Couple together" class="final-image" />
+            <h2>You Mean Everything to Me ❤️</h2>
+
+            <div class="heart-symbols">
+                <span class="heart-icon">❤️</span>
+                <span class="heart-icon">❤️</span>
+                <span class="heart-icon">❤️</span>
+            </div>
+            <button class="restart-btn" type="button" onclick="restartJourney()">Start Again</button>
+        </div>
+    </section>
+
+    <!-- Success Modal (old version - keeping for compatibility) -->
+    <div id="successModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="success-animation">
+                <div class="heart-burst">❤️</div>
+                <div class="heart-burst">❤️</div>
+                <div class="heart-burst">❤️</div>
+            </div>
+            <h2>You Make Me The Happiest! 💕</h2>
+            <p>I love you so much. Let's build our beautiful forever together!</p>
+            <button class="modal-btn" onclick="restartJourney()">Start Over</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
